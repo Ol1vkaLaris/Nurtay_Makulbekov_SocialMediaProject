@@ -1,0 +1,82 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheDigitalRabbitHole</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-left">
+            <span class="logo">TheDigitalRabbitHole</span>
+        </div>
+        <div class="nav-center">
+            <input type="text" class="search-input" placeholder="Search">
+        </div>
+        <div class="nav-right">
+            <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                {% get_current_language as LANGUAGE_CODE %}
+                {% get_available_languages as LANGUAGES %}
+                {% get_language_info_list for LANGUAGES as languages %}
+                {% for language in languages %}
+                <button type="submit" name="language" value="{{language.code}}" {% if language.code == LANGUAGE_CODE %} disabled style="cursor : auto;"{% endif %}>
+                    {% if language.code == 'ru' %}
+                    RU 
+                    {% elif language.code == 'en' %}
+                    EN
+                    {% endif %}
+                </button>
+                {% endfor %}
+            </form>
+            <button id="theme-toggle" class="theme-toggle">🌙</button>
+            <div>
+                {% if user.is_authenticated %}
+                <p>{{user.username}}</p>
+                <a href = "{% url "logout" %}">
+                    <button> {% trans 'Выйти' %} </button>
+                </a>
+                {% else %}
+                  <a href = "{% url "login" %}">
+                    <button> {% trans 'Войти' %} </button>
+                </a>
+                <a href = "{% url "registr" %}">
+                    <button> {% trans 'Регистрация' %} </button>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>TheDigitalRabbitHole &copy; 2025</p>
+    </footer>
+
+    <!-- Small JS for dark mode + like button -->
+    <script>
+        // Dark mode toggle
+        const toggleBtn = document.getElementById('theme-toggle');
+        const body = document.body;
+
+        toggleBtn.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            toggleBtn.textContent = body.classList.contains('dark-mode') ? '☀️' : '🌑';
+        });
+
+        // Like button visual toggle
+        document.addEventListener('click', function (e) {
+            if (e.target.classList.contains('like-btn')) {
+                e.target.classList.toggle('liked');
+            }
+        });
+    </script>
+</body>
+</html>

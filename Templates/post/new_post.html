@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="NewPost">
+    <h1>Создание поста</h1>
+    <form method="POST" enctype="multipart/form-data">
+        [{% csrf_token %}]
+         <label for="title">Заголовок (ru)</label>
+        {{form.title_ru}}
+        <label for="content">Контент (ru)</label>
+        {{form.content_ru}}
+        <label for="title">Заголовок (en)</label>
+        {{form.title_en}}
+        <label for="content">Контент (en)</label>
+        {{form.content_en}}
+        <label for="image_select">Выбрать изображения:</label>
+        <div style = "display: none;">
+        {{form.images}}
+        </div>
+        <p id="selected-files"></p>
+        <button type="submit">Добавить пост</button>
+
+    </form>
+</div>
+<script src="{% static 'scripts.js' %}"></script>
+{% endblock  %}

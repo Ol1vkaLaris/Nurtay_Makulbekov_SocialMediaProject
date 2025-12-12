@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-12 15:20+0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: Templates/base.html:40
+msgid "Выйти"
+msgstr "Logout"
+
+#: Templates/base.html:44
+msgid "Войти"
+msgstr "Login"
+
+#: Templates/base.html:47
+msgid "Регистрация"
+msgstr "Sign Up"
+
+#: Templates/post/new_comment.html:6 Templates/post/post_list.html:83
+msgid "Опубликовать"
+msgstr "Post"
+
+#: Templates/post/post_details.html:11
+msgid "Опубликовано:"
+msgstr "Posted"
+
+#: Templates/post/post_details.html:13
+msgid "Изменен"
+msgstr "Edited"
+
+#: Templates/post/post_list.html:8
+msgid "Новый Пост"
+msgstr "New Post"
+
+#: Templates/post/post_list.html:27
+msgid "edited"
+msgstr "Изменен"
+
+#: Templates/post/post_list.html:49
+msgid "Изменить Пост"
+msgstr "Edit Post"
+
+#: Templates/post/post_list.html:53
+msgid "Удалить Пост"
+msgstr "Delete Post"
+
+#: Templates/post/post_list.html:82
+msgid "Ваш Комментарий..."
+msgstr "Add a comment..."
+
+#: Templates/post/post_list.html:90
+msgid "Закреплено"
+msgstr "Pinned"
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:7
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:204
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:206
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:208
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" "
+"rel=\"noopener\">DEBUG=True</a> is in your settings file and you have not "
+"configured any URLs."
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:217
+msgid "Django Documentation"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:218
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:226
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:227
+msgid "Get started with Django"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:235
+msgid "Django Community"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/default_urlconf.html:236
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: myvenv/lib/python3.13/site-packages/django/views/templates/directory_index.html:8
+#: myvenv/lib/python3.13/site-packages/django/views/templates/directory_index.html:11
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""

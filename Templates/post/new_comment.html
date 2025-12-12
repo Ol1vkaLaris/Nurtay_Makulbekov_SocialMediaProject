@@ -1,0 +1,8 @@
+{% extends "post_list.html" %}
+{% load i18n %}
+{% block new_comment %}
+<form method="post">
+    {{form.content}}
+    <button type="submit">{% trans "Опубликовать" %}</button>
+</form>
+{% endblock %}

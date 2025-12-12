@@ -1,0 +1,29 @@
+создание витруалной среды
+python3 -m venv myvenv - на MacOS
+
+активация виртуальной среды 
+source myvenv/bin/activate - на MacOS
+
+установка библиотек и модуле
+pip install django psycopg2-binary - MacOS
+
+сохранение списка библотек для проекта
+pip freeze > requirements.txt
+
+установка библиотек из файла 
+pip install -r requirements.txt
+
+мигрировать в базу данных
+python manage.py migrate 
+
+запуск проекта 
+python manage.py runserver
+
+создание супер пользователя 
+python manage.py createsuperuser
+
+создание приложения 
+python manage.py startapp post
+
+создание миграцией 
+python manage.py migrate

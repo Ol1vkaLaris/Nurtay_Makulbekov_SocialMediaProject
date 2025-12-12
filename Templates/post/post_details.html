@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<div class = "post_info">
+    <div class = "images"></div>
+        {% for image in images  %}
+        <img src="{{image.file.url}}" alt="" width = "300px">
+        {% endfor %}
+    <div>{{post.title}}</div>
+    <p>
+        {% trans 'Опубликовано:' %} {{post.author.username}} {{post.time_stamp}}
+        {% if post.edited %}
+            ({% trans "Изменен" %})
+        {% endif %}
+    </p>
+    <p>{{post.content}}</p>
+
+</div>
+<div class = "comments">
+    {% for comment in comments %}
+    <div class = "comment">
+        <p>{{comment.time_stamp}}</p>
+        <p>{{comment.content}}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
