@@ -77,8 +77,8 @@ def post_edit(request, pid):
             chosen = request.POST.getlist('attachments')
             for img_id in chosen:
                 PostAttachments.objects.get(pk = img_id).delete()
-                post.edited = True 
-                post.save()
+            post.edited = True 
+            post.save()
         return redirect(to='post_details', pid=post.pk)
     return render(request, 'post/edit_post.html', {'form': form, 'post_att': post_att})
 
